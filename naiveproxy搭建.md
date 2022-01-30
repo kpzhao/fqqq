@@ -54,6 +54,7 @@ vim /etc/naiveproxy/config.json
 }
 ```
 ./caddy start -config /etc/caddy/Caddyfile
+./native config.json
 ## 客户端
 ```
 vim /etc/naiveproxy/config.json

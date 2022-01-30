@@ -26,7 +26,10 @@ export PATH=$GOROOT/bin:$PATH
 
 ## 使变量立即生效
 source /etc/profile
-
+## 创建caddyfile
+```
+vim /etc/caddy/Caddyfile
+```
 ```
 :443, kpzhao.xyz
 route {

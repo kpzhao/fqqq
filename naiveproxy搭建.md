@@ -45,3 +45,6 @@ reverse_proxy http://kpzhao.xyz {
         header_up Host kpzhao.xyz
     }
 ```
+## naiveproxy
+
+caddy run

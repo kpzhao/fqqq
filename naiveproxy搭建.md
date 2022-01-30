@@ -26,3 +26,19 @@ export PATH=$GOROOT/bin:$PATH
 
 ## 使变量立即生效
 source /etc/profile
+
+```
+:443, kpzhao.xyz
+route {
+  forward_proxy {
+    basic_auth kpzhao 666999
+    hide_ip
+    hide_via
+    probe_resistance
+  }
+  #file_server { root /usr/share/caddy }
+}
+reverse_proxy http://kpzhao.xyz {
+        header_up Host kpzhao.xyz
+    }
+```

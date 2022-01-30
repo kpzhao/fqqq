@@ -46,5 +46,22 @@ reverse_proxy http://kpzhao.xyz {
     }
 ```
 ## naiveproxy
-
-caddy run
+vim /etc/naiveproxy/config.json
+```
+{
+    "listen": "http://127.0.0.1:1080",
+    "padding": "true"
+}
+```
+./caddy start -config /etc/caddy/Caddyfile
+## 客户端
+```
+vim /etc/naiveproxy/config.json
+```
+```
+{
+    "listen": "socks://127.0.0.1:1080",
+    "proxy": "https://kpzhao:666999@domain.example",
+    "padding": "true"
+}
+```

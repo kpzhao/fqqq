@@ -46,7 +46,7 @@ EOF
 cat > /etc/naiveproxy/config.json <<EOF
 {
   "listen": "socks://127.0.0.1:1080",
-  "proxy": "https://kpzhao:123456@kpzhao.xyz", # quic or http
+  "proxy": "https://kpzhao:123456@kpzhao.xyz"
 }
 EOF
 ```

@@ -34,7 +34,7 @@ vim /etc/caddy/Caddyfile
 :443, kpzhao.xyz
 route {
   forward_proxy {
-    basic_auth kpzhao 666999
+    basic_auth kpzhao 123456
     hide_ip
     hide_via
     probe_resistance

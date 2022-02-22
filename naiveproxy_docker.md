@@ -79,3 +79,13 @@ sysctl net.ipv4.tcp_available_congestion_control
 ```
 lsmod | grep bbr
 ```
+## 后台运行
+在程序目录下创建 ss-background.vbs
+```
+Set ws = CreateObject("Wscript.Shell")   
+ws.run "naive.exe", vbhide
+```
+创建快捷方式放到 系统的启动栏中
+以Win10为例，放到：
+
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp

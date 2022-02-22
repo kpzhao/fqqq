@@ -14,7 +14,7 @@ cp -r ~/fqqq/CA /etc/naiveproxy/CA
 ```
 ## Modify the configuration
 ```
-$ cat > /etc/naiveproxy/Caddyfile <<EOF
+cat > /etc/naiveproxy/Caddyfile <<EOF
 {
   admin off
   log {

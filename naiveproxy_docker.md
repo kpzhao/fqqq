@@ -10,7 +10,7 @@ mkdir -p /etc/naiveproxy
 ## copy CA 
 ```
 git clone https://github.com/kpzhao/fqqq.git
-cp ~/fqqq/CA /etc/naiveproxy/CA
+cp -r ~/fqqq/CA /etc/naiveproxy/CA
 ```
 ## Modify the configuration
 ```

@@ -33,7 +33,7 @@ $ cat > /etc/naiveproxy/Caddyfile <<EOF
 }
 
 :443, kpzhao.xyz
-tls 970956535@qq.com
+tls /etc/naiveproxy/CA/kpzhao.xyz.pem /etc/naiveproxy/CA/kpzhao.xyz.key
 route {
   forward_proxy {
       basic_auth kpzhao 123456

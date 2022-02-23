@@ -1,3 +1,8 @@
+##
+```
+ssh root@43.154.164.174
+```
+
 ## Get this image
 ```
 docker pull pocat/naiveproxy && docker pull pocat/naiveproxy:client

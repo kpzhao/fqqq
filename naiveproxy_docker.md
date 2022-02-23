@@ -1,7 +1,6 @@
 ## Get this image
 ```
-docker pull pocat/naiveproxy
-docker pull pocat/naiveproxy:client
+docker pull pocat/naiveproxy && docker pull pocat/naiveproxy:client
 ```
 ## create a directory
 ```
@@ -58,6 +57,8 @@ EOF
 ## Start the service
 ```
 docker run --network host --name naiveproxy -v /etc/naiveproxy:/etc/naiveproxy -v /var/www/html:/var/www/html -v /var/log/caddy:/var/log/caddy -e PATH=/etc/naiveproxy/Caddyfile --restart=always -d pocat/naiveproxy
+```
+```
 sudo docker run --network host --name naiveproxy-client -v /etc/naiveproxy:/etc/naiveproxy --restart=always -d pocat/naiveproxy:client
 ```
 ## client

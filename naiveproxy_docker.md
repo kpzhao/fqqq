@@ -33,7 +33,7 @@ cat > /etc/naiveproxy/Caddyfile <<EOF
 }
 
 :443, kpzhao.xyz
-tls /etc/naiveproxy/CA/kpzhao.xyz.pem /etc/naiveproxy/CA/kpzhao.xyz.key
+tls kaipengzhao@gmail.com
 route {
   forward_proxy {
       basic_auth kpzhao 123456
@@ -57,7 +57,7 @@ EOF
 ```
 ## Start the service
 ```
-sudo docker run --network host --name naiveproxy -v /etc/naiveproxy:/etc/naiveproxy -v /var/www/html:/var/www/html -v /var/log/caddy:/var/log/caddy -e PATH=/etc/naiveproxy/config.json --restart=always -d pocat/naiveproxy
+docker run --network host --name naiveproxy -v /etc/naiveproxy:/etc/naiveproxy -v /var/www/html:/var/www/html -v /var/log/caddy:/var/log/caddy -e PATH=/etc/naiveproxy/Caddyfile --restart=always -d pocat/naiveproxy
 sudo docker run --network host --name naiveproxy-client -v /etc/naiveproxy:/etc/naiveproxy --restart=always -d pocat/naiveproxy:client
 ```
 ## client
